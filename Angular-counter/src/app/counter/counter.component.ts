@@ -36,4 +36,7 @@ export class CounterComponent {
     },100);
   }
 
+  reset(){
+    this.counter=0;
+  }
 }
