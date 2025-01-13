@@ -23,7 +23,7 @@ export class CounterComponent {
   startinc(){
     this.intervalID=setInterval(()=>{
       this.increment();
-    },100);
+    },40);
   }
 
   stop(){
@@ -33,7 +33,7 @@ export class CounterComponent {
   startdec(){
     this.intervalID=setInterval(()=>{
       this.decrement();
-    },100);
+    },40);
   }
 
   reset(){
