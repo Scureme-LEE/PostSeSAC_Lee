@@ -7,15 +7,33 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-counter=0;
+  counter=0;
+  intervalID: any=null;
 
-increment() {
-  this.counter++
-}
-
-decrement() {
-  if(this.counter>0){
-  this.counter--
+  increment() {
+    this.counter++
   }
-}
+
+  decrement() {
+    if(this.counter>0){
+    this.counter--
+    }
+  } 
+
+  startinc(){
+    this.intervalID=setInterval(()=>{
+      this.increment();
+    },100);
+  }
+
+  stop(){
+    clearInterval(this.intervalID);
+  }
+
+  startdec(){
+    this.intervalID=setInterval(()=>{
+      this.decrement();
+    },100);
+  }
+
 }
