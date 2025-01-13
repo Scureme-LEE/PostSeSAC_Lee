@@ -1,6 +1,6 @@
 <div style="text-align: center">
     <h1>계산기</h1>
-    <button (click)="decrement()">-</button>
-    <button (click)="increment()">+</button>
+    <button (mousedown)="startdec()" (mouseup)="stop()">-</button>
+    <button (mousedown)="startinc()" (mouseup)="stop()">+</button>
     <h2>{{ counter }}</h2>
 </div>
