@@ -2,15 +2,30 @@ import React,{useState} from "react";
 
 const Counter=()=>{
     const [counter, setCounter]=useState(0);
-    const increment=()=>setCounter(counter+1);
-    const decrement=()=>setCounter(counter-1);
-    const reset=()=>setCounter(0)
+    const [intervalID, setIntervalID]=useState(null);
+
+    const increment=()=>{
+        const ID=setInterval(()=>setCounter(counter=>counter+1),40);
+        setIntervalID(ID);
+    };
+        
+    const decrement=()=>{
+        const ID=setInterval(()=>setCounter(counter=>counter-1),40);
+        setIntervalID(ID);
+    };
+
+    const stop=()=>{
+        clearInterval(intervalID);
+        setIntervalID(null);
+    };
+    const reset=()=>setCounter(0);
+
     return (
         <>
         <h1>카운터</h1>
-        <button onClick={decrement}>-</button>
+        <button onMouseDown={decrement} onMouseUp={stop}>-</button>
         <h2>{counter}</h2>
-        <button onClick={increment}>+</button> 
+        <button onMouseDown={increment} onMouseUp={stop}>+</button> 
         <button onClick={reset}>리셋</button>      
         </>
     );
