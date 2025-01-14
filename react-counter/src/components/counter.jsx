@@ -10,8 +10,10 @@ const Counter=()=>{
     };
         
     const decrement=()=>{
-        const ID=setInterval(()=>setCounter(counter=>counter-1),40);
-        setIntervalID(ID);
+        if (counter>0){
+            const ID=setInterval(()=>setCounter(counter=>counter-1),40);
+            setIntervalID(ID);
+        };
     };
 
     const stop=()=>{
