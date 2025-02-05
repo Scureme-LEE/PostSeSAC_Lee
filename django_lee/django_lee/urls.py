@@ -19,5 +19,6 @@ from django.urls import path , include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('hello.urls')) # hello 앱의 url에 연결
+    path('',include('hello.urls')), # hello 앱의 url에 연결
+    path('angular/',include('django_angular.urls')) # django_angular 앱의 url에 연결결
 ]
