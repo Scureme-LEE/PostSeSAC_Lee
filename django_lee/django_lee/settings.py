@@ -2,7 +2,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -106,7 +105,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR.parent / 'Angular-counter/dist/angular-counter'
+    BASE_DIR.parent / 'Angular-counter/dist/angular-counter/browser'
     
     # Angular 빌드 폴더에 연결
     
