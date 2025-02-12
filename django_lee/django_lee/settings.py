@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # django_lee/django_lee/settings.py의 paretn.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
+    'django_angular' # django_angular앱 추가가
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR.parent / 'Angular-counter/dist/angular-counter/browser'
+    BASE_DIR.parent / 'Angular-counter/dist/angular-counter/browser',
     
     # Angular 빌드 폴더에 연결
     

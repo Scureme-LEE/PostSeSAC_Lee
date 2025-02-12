@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+class AngularView(TemplateView):
+    template_name='index.html'
+    #Angular 빌드의 index.html 출력
