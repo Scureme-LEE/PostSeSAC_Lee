@@ -80,10 +80,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/angular/angular-counter/browser',
+    BASE_DIR / 'frontend/angular/browser',
     # Angular 빌드 폴더에 연결
     
     BASE_DIR / 'frontend/React/build',
@@ -92,6 +92,5 @@ STATICFILES_DIRS = [
     BASE_DIR / 'frontend/vue/dist'
     # Vue.js 빌드 폴더에 연결
 ]
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
